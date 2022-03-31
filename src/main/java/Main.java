@@ -18,6 +18,9 @@ public class Main {
         NetworkTableEntry ts = table.getEntry("ts");
         NetworkTableEntry tl = table.getEntry("tl");
 
+
+        NetworkTableEntry pipeline = table.getEntry("pipeline");
+
         while (true) {
             try {
                 Thread.sleep(1000);
@@ -32,6 +35,9 @@ public class Main {
             ta.setDouble(5);
             tl.setDouble(7);
             ts.setDouble(9);
+
+            double pipelineVal = pipeline.getDouble(-1);
+            System.out.println("Pipeline: " + pipelineVal);
         }
     }
 }
